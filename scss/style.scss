@@ -30,7 +30,7 @@
         min-height: 100vh;
 
         .container {
-            max-width: 400px;
+            max-width: 344px;
             margin: 0 auto;
 
             .calculator-main-block {
@@ -60,16 +60,14 @@
 
                     button {
                         border-radius: 55px;
-                        height: 88px;
+                        height: 74px;
                         width: 100%;
                         border: none;
                         background: var(--primary-color);
                         color: var(--white-color);
-                        font-size: 2.6em;
+                        font-size: 2.2em;
                         cursor: pointer;
-                        &:hover{
-                            
-                        }
+                        
                     }
 
                     .adv-operator-btn {
