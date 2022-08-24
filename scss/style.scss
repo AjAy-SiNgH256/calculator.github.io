@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'SF Pro Display';
+}
+
+@mixin grid-property {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: none;
+}
+
+@mixin col-flex-property {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --dark-bg: #000;
+    --primary-color: #313131;
+    --condition-btn-color: #f69906;
+    --adv-condition-btn-color: #9f9f9f;
+    --white-color: #fff;
+}
+
+.wrapper {
+    .main-bg {
+        background-color: var(--dark-bg);
+        min-height: 100vh;
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+
+            .calculator-main-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .calculator-display-block {
+                    min-height: 20vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    h2 {
+                        color: var(--white-color);
+                        text-align: right;
+                        font-size: 5.5em;
+                        font-weight: 200;
+                        margin: 0 18px 10px;
+                    }
+                }
+
+                .calculator-button-main-block {
+                    @include grid-property;
+                    column-gap: 16px;
+                    row-gap: 16px;
+
+                    button {
+                        border-radius: 55px;
+                        height: 88px;
+                        width: 100%;
+                        border: none;
+                        background: var(--primary-color);
+                        color: var(--white-color);
+                        font-size: 2.6em;
+                    }
+
+                    .adv-operator-btn {
+                        background: var(--adv-condition-btn-color);
+                        color: var(--dark-bg);
+                    }
+
+                    .opertors-btn {
+                        background: var(--condition-btn-color);
+                        color: var(--white-color);
+                    }
+
+                    .null-digit {
+                        grid-column: span 2;
+                        text-align: left;
+                        padding: 0 34px;
+                    }
+                }
+            }
+        }
+    }
+}

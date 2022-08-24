@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'SF Pro Display';
+}
+
+:root {
+  --dark-bg: #000;
+  --primary-color: #313131;
+  --condition-btn-color: #f69906;
+  --adv-condition-btn-color: #9f9f9f;
+  --white-color: #fff;
+}
+
+.wrapper .main-bg {
+  background-color: var(--dark-bg);
+  min-height: 100vh;
+}
+
+.wrapper .main-bg .container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.wrapper .main-bg .container .calculator-main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-display-block {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-display-block h2 {
+  color: var(--white-color);
+  text-align: right;
+  font-size: 5.5em;
+  font-weight: 200;
+  margin: 0 18px 10px;
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-button-main-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  border: none;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  row-gap: 16px;
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-button-main-block button {
+  border-radius: 55px;
+  height: 88px;
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-size: 2.6em;
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-button-main-block .adv-operator-btn {
+  background: var(--adv-condition-btn-color);
+  color: var(--dark-bg);
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-button-main-block .opertors-btn {
+  background: var(--condition-btn-color);
+  color: var(--white-color);
+}
+
+.wrapper .main-bg .container .calculator-main-block .calculator-button-main-block .null-digit {
+  grid-column: span 2;
+  text-align: left;
+  padding: 0 34px;
+}
+/*# sourceMappingURL=style.css.map */
