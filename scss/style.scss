@@ -16,6 +16,13 @@
     flex-direction: column;
 }
 
+@mixin flex-property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 :root {
     --dark-bg: #000;
     --primary-color: #313131;
@@ -32,24 +39,32 @@
         .container {
             max-width: 344px;
             margin: 0 auto;
+            min-height: 100vh;
+            @include flex-property;
 
             .calculator-main-block {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                width: 100%;
 
                 .calculator-display-block {
-                    min-height: 20vh;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
 
-                    h2 {
+                    input {
                         color: var(--white-color);
                         text-align: right;
                         font-size: 5.5em;
                         font-weight: 200;
                         margin: 0 18px 10px;
+                        overflow: hidden;
+                        background: transparent;
+                        border: none;
+                        &::placeholder{
+                            color: var(--white-color);
+                        }
                     }
                 }
 
@@ -57,7 +72,7 @@
                     @include grid-property;
                     column-gap: 16px;
                     row-gap: 16px;
-
+                    margin-bottom: 20px;
                     button {
                         border-radius: 55px;
                         height: 74px;
@@ -67,7 +82,7 @@
                         color: var(--white-color);
                         font-size: 2.2em;
                         cursor: pointer;
-                        
+
                     }
 
                     .adv-operator-btn {
@@ -83,7 +98,7 @@
                     .null-digit {
                         grid-column: span 2;
                         text-align: left;
-                        padding: 0 34px;
+                        padding: 0 29px;
                     }
                 }
             }
